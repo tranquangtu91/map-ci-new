@@ -108,24 +108,24 @@
 
         function toggleBounce() {
             var data = {name:this.title};
-        $.ajax({
-            url: '<?php echo base_url().'Device/search'?>',
-            type: "POST",
-            dataType: "Json",
-            data: data,
-            success: function (data) {
-                if(data.success){
-                    $('#myModal').html(data.message);
-                    $('#myModal').modal('show');
-                }else{
-                    toast('Có lỗi !',data.message,'error');
-                }
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                toast('Có lỗi !',errorThrown+': '+textStatus,'error');
+            $.ajax({
+                url: '<?php echo base_url().'Device/search'?>',
+                type: "POST",
+                dataType: "Json",
+                data: data,
+                success: function (data) {
+                    if(data.success){
+                        $('#myModal').html(data.message);
+                        $('#myModal').modal('show');
+                    }else{
+                        toast('Có lỗi !',data.message,'error');
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    toast('Có lỗi !',errorThrown+': '+textStatus,'error');
 
-            }
-        });
+                }
+            });
         }
 
         $(document).ready(function(){
@@ -137,8 +137,7 @@
                     $('#pac-input').val(itemc.label);
                     if(typeof markers !=undefined && markers.length>=0){
                         for(i=0;i<markers.length;i++){
-                            if(markers[i]['position'].lat().toFixed(3)==itemc['lat']&&
-                                markers[i]['position'].lng().toFixed(3)==itemc['long']){
+                            if(markers[i]['position'].lat().toFixed(3) == itemc['lat'] && markers[i]['position'].lng().toFixed(3)==itemc['long']) {
                                 map.setCenter({lat:itemc['lat'], lng:itemc['long']})
                                 markers[i].setAnimation(google.maps.Animation.BOUNCE);
                                 setTimeout(function() {

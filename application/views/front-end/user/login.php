@@ -1,7 +1,7 @@
 <div class="loginColumns animated fadeInDown">
     <div class="row">
         <div class="col-md-6">
-            <h2 class="font-bold">Welcome to ELCOM</h2>
+            <h2 class="font-bold">Welcome to DHT Group</h2>
             <p>
                 <small>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</small>
             </p>
@@ -18,16 +18,16 @@
                         <input type="password" id="password" class="form-control input-lg" placeholder="Password" name="password" required/>
                     </div>
                     <input type="submit" class="btn btn-primary block full-width m-b" value="Login">
-                    <a href="#">
+<!--                    <a href="#">
                         <small>Forgot password?</small>
                     </a>
                     <p class="text-muted text-center">
                         <small>Do not have an account?</small>
                     </p>
-                    <a class="btn btn-sm btn-white btn-block" href="register.html">Create an account</a>
+                    <a class="btn btn-sm btn-white btn-block" href="register.html">Create an account</a>-->
                 </form>
                 <p class="m-t">
-                    <small>ELCOM 3 &copy; 2016</small>
+                    <small>DHT Group 3 &copy; 2016</small>
                 </p>
             </div>
         </div>
