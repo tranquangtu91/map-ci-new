@@ -173,12 +173,12 @@
                                         <div class="col-sm-1" style="padding: 1px 1px 1px 10px">
                                             <select id="<?php echo 'option1_'.$i?>" class="form-control pointer input-sm vms-input vms-input-option1" name="option1_[<?php echo $i?>]">
                                                 <option name="item" value="-1">--Loại OPT--</option>
-                                                <option name="item" value="0" <?php echo @!is_null($data->config->otherConfig->option1[$i])&&$data->config->otherConfig->option1[$i]==0?' selected':''?>>Xanh</option>
-                                                <option name="item" value="2" <?php echo @!is_null($data->config->otherConfig->option1[$i])&&$data->config->otherConfig->option1[$i]==2?' selected':''?>>Vang</option>
-                                                <option name="item" value="1" <?php echo @!is_null($data->config->otherConfig->option1[$i])&&$data->config->otherConfig->option1[$i]==1?' selected':''?>>Đo</option>
-                                                <option name="item" value="3" <?php echo @!is_null($data->config->otherConfig->option1[$i])&&$data->config->otherConfig->option1[$i]==3?' selected':''?>>Chu thap</option>
-                                                <option name="item" value="4" <?php echo @!is_null($data->config->otherConfig->option1[$i])&&$data->config->otherConfig->option1[$i]==4?' selected':''?>>Bo xanh</option>
-                                                <option name="item" value="5" <?php echo @!is_null($data->config->otherConfig->option1[$i])&&$data->config->otherConfig->option1[$i]==5?' selected':''?>>Bo do</option>
+                                                <option value="0" <?php echo !is_null($data->config->otherConfig->option1[$i])&&$data->config->otherConfig->option1[$i]==0?' selected':''?>>Xanh</option>
+                                                <option value="1" <?php echo !is_null($data->config->otherConfig->option1[$i])&&$data->config->otherConfig->option1[$i]==1?' selected':''?>>Vàng</option>
+                                                <option value="2" <?php echo !is_null($data->config->otherConfig->option1[$i])&&$data->config->otherConfig->option1[$i]==2?' selected':''?>>Đỏ</option>
+                                                <option value="3" <?php echo !is_null($data->config->otherConfig->option1[$i])&&$data->config->otherConfig->option1[$i]==3?' selected':''?>>Chữ thập</option>
+                                                <option value="4" <?php echo !is_null($data->config->otherConfig->option1[$i])&&$data->config->otherConfig->option1[$i]==4?' selected':''?>>Đi bộ xanh</option>
+                                                <option value="5" <?php echo !is_null($data->config->otherConfig->option1[$i])&&$data->config->otherConfig->option1[$i]==5?' selected':''?>>Đi bộ đỏ</option>
                                             </select>
                                         </div>
                                     <?php endfor;?>
@@ -192,12 +192,12 @@
                                         <div class="col-sm-1" style="padding: 1px 1px 1px 10px">
                                             <select id="<?php echo 'option2_'.$i;?>" class="form-control pointer input-sm vms-input vms-input-option2" name="option2_[<?php echo $i?>]">
                                                 <option value="-1">--Loại OPT--</option>
-                                                <option value="0" <?php echo @!is_null($data->config->otherConfig->option1[$i])&&$data->config->otherConfig->option1[$i]==0?' selected':''?>>Xanh</option>
-                                                <option value="2" <?php echo @!is_null($data->config->otherConfig->option1[$i])&&$data->config->otherConfig->option1[$i]==2?' selected':''?>>Vang</option>
-                                                <option value="1" <?php echo @!is_null($data->config->otherConfig->option1[$i])&&$data->config->otherConfig->option1[$i]==1?' selected':''?>>Đo</option>
-                                                <option value="3" <?php echo @!is_null($data->config->otherConfig->option1[$i])&&$data->config->otherConfig->option1[$i]==3?' selected':''?>>Chu thap</option>
-                                                <option value="4" <?php echo @!is_null($data->config->otherConfig->option1[$i])&&$data->config->otherConfig->option1[$i]==4?' selected':''?>>Bo xanh</option>
-                                                <option value="5" <?php echo @!is_null($data->config->otherConfig->option1[$i])&&$data->config->otherConfig->option1[$i]==5?' selected':''?>>Bo do</option>
+                                                <option value="0" <?php echo !is_null($data->config->otherConfig->option2[$i])&&$data->config->otherConfig->option2[$i]==0?' selected':''?>>Xanh</option>
+                                                <option value="1" <?php echo !is_null($data->config->otherConfig->option2[$i])&&$data->config->otherConfig->option2[$i]==1?' selected':''?>>Vàng</option>
+                                                <option value="2" <?php echo !is_null($data->config->otherConfig->option2[$i])&&$data->config->otherConfig->option2[$i]==2?' selected':''?>>Đỏ</option>
+                                                <option value="3" <?php echo !is_null($data->config->otherConfig->option2[$i])&&$data->config->otherConfig->option2[$i]==3?' selected':''?>>Chữ thập</option>
+                                                <option value="4" <?php echo !is_null($data->config->otherConfig->option2[$i])&&$data->config->otherConfig->option2[$i]==4?' selected':''?>>Đi bộ xanh</option>
+                                                <option value="5" <?php echo !is_null($data->config->otherConfig->option2[$i])&&$data->config->otherConfig->option2[$i]==5?' selected':''?>>Đi bộ đỏ</option>
                                             </select>
                                         </div>
                                     <?php endfor;?>
