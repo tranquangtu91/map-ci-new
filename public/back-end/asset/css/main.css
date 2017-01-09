@@ -1,0 +1,19 @@
+div#header {
+    background-color: aqua;
+}
+#footer {
+    background-color: blanchedalmond;
+}
+.main-content{
+    background-color: #9ECEFF;
+}
+.btnActionDiv{
+    float: right; 
+    margin-right: 0px; 
+    margin-top: 20px;
+}
+.btnActionDiv button.m-t-n-xs{
+    margin-bottom: 0px; 
+    margin-right: 5px;
+    color: white !important;
+}
