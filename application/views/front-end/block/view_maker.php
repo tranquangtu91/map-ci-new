@@ -2,7 +2,11 @@
     <div class="modal-content">
         <div id="headerDiv" class="" style="padding: 0px;border-bottom-width: 0px;">
             <div class="alert alert-warning" id="WarningMessageAdd"></div>
-            <div class="titleDev" style="position: absolute;top: 10px;left: 10px;margin-left: 10px; font-size: 14px"><?php echo !@empty($data->config->deviceName)?$data->config->deviceName.' - [Mô tả]':''?></div>
+            
+            <div class="titleDev" style="position: absolute;top: 10px;left: 10px;margin-left: 10px; font-size: 14px">
+                <?php echo !empty($data->config->deviceName)?$data->config->deviceName:''?>
+            </div>
+            
             <button type="button" class="close" data-dismiss="modal">
                 <span aria-hidden="true" class="close-span">&times;</span><span class="sr-only">Close</span>
             </button>
@@ -18,12 +22,12 @@
                             <h4 class="label-vms" style="background-color: #6d6e70; margin-bottom: -5px;margin-top: 0px;width: 35%;height: 18px;font-size: 14px;">THÔNG TIN CHUNG</h4>
                             <hr style="border-top-color: #939598;">
                             <div class="form-group">
-                                <label class="col-sm-1 control-label label-vms">Tên giao lộ<font color="red"><b>*</b></font></label>
-                                <div class="col-sm-5">
+                                <label class="col-sm-1 control-label label-vms" >Tên giao lộ<font color="red"><b>*</b></font></label>
+                                <div class="col-sm-5" style="width: 300px">
                                     <input id="vmsName" placeholder="Tên giao lộ" type="text" name="intersection_name" maxlength="100" value="<?php echo !@empty($data->config->name)?$data->config->name:''?>" class="form-control input-sm">
                                 </div>
                                 <label class="col-sm-1 control-label label-vms">Ưu tiên<font color="red"><b>*</b></font></label>
-                                <div class="col-sm-3">
+                                <div class="col-sm-3" style="width: 300px">
                                     <select id="vmsTypeOrder" name="vmsTypeOrder" class="form-control input-sm">
                                         <option value="-1">--Loại Ưu tiên--</option>
                                         <option value="0">Auto</option>
@@ -46,7 +50,7 @@
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-1 control-label label-vms" name="chien-luoc">Chiến lược<font color="red"><b>*</b></font></label>
-                                <div class="col-sm-4">
+                                <div class="col-sm-4" style="width: 300px">
                                     <!--<input type="text" placeholder="Chiến lược" id="vmsPort" maxlength="6" class="form-control input-sm vms-input" placeholder="">-->
                                     <select  id="chien-luoc" class="form-control input-sm" name="chien-luoc">
                                         <option value="-1">--Chọn chiến lược--</option>
@@ -61,7 +65,7 @@
                                     <input type="hidden" name="config_device_stragetiesD" id="config_device_stragetiesD" value='<?php echo @!empty($data->config->mainConfig->stragetiesD)?json_encode($data->config->mainConfig->stragetiesD):''?>'/>
                                 </div>
                                 <label class="col-sm-1 control-label label-vms">Thời điểm<font color="red"><b>*</b></font></label>
-                                <div class="col-sm-3">
+                                <div class="col-sm-3" style="width: 300px">
                                     <!--<input type="text" placeholder="Thời điểm" id="vmsIp" maxlength="20" class="form-control input-sm vms-input" placeholder="">-->
                                     <select class="form-control input-sm" id="thoi-diem" name="thoi-diem">
                                         <option value="-1">--Chọn thời điểm--</option>
@@ -122,7 +126,7 @@
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-1 control-label label-vms">Bắt đầu<font color="red"><b>*</b></font></label>
-                                <div class="col-sm-4">
+                                <div class="col-sm-4" style="width: 300px">
 <!--                                    <input type="text" placeholder="Thời điểm" id="vmsStartTime" name="vmsStartTime" maxlength="20" class="form-control input-sm vms-input vms-input-start-time  vms-select-input" placeholder="">-->
                                     <div class="ibox-content">
                                         <div class="input-group clockpicker clockpickerStartTime" data-autoclose="true">
@@ -132,7 +136,7 @@
                                     </div>
                                 </div>
                                 <label class="col-sm-1 control-label label-vms">kết thúc<font color="red"><b>*</b></font></label>
-                                <div class="col-sm-3">
+                                <div class="col-sm-3" style="width: 300px">
 <!--                                    <input type="text" placeholder="Chiến lược" id="vmsEndTime" name="vmsEndTime" maxlength="6" class="form-control input-sm vms-input vms-input-end-time vms-select-input" placeholder="">-->
                                     <div class="ibox-content">
                                         <div class="input-group clockpicker clockpickerEndTime" data-autoclose="true">
@@ -147,16 +151,18 @@
                             <h4 class="label-vms" style="background-color: #6d6e70;margin-bottom: -5px;margin-top: 0px;width: 30%;height: 18px;font-size: 13px;">Chiến lược ngày</h4>
                             <hr style="border-top-color: #939598;">
                             <div class="form-group">
-                                <label class="col-sm-1 control-label label-vms">T2->CN<font color="red"><b>*</b></font>
+                                <label class="col-sm-1 control-label label-vms">
+                                    T2->CN<font color="red"><b>*</b></font>
                                 </label>
+                                
                                 <?php for($i=0;$i<7;$i++):?>
                                     <div class="col-sm-1">
                                         <select id="<?php echo 'stragetiesDay['.($i).']';?>" name="chien-luoc-ngay[<?php echo $i+2?>]" class="form-control pointer input-sm vms-input">
                                             <option value="-1">--Loại chiến lược--</option>
-                                            <option value="0" <?php echo @!empty($data->config->otherConfig->strageties[$i]) && $data->config->otherConfig->strageties[$i]=='A'?' selected':''?>>A</option>
-                                            <option value="1"  <?php echo @!empty($data->config->otherConfig->strageties[$i]) && $data->config->otherConfig->strageties[$i]=='B'?' selected':''?>>B</option>
-                                            <option value="2"  <?php echo @!empty($data->config->otherConfig->strageties[$i]) && $data->config->otherConfig->strageties[$i]=='C'?' selected':''?>>C</option>
-                                            <option value="3"  <?php echo @!empty($data->config->otherConfig->strageties[$i]) && $data->config->otherConfig->strageties[$i]=='D'?' selected':''?>>D</option>
+                                            <option value="0" <?php echo!empty($data->config->otherConfig->strageties[$i]) && $data->config->otherConfig->strageties[$i]=='A'?' selected':''?>>A</option>
+                                            <option value="1"  <?php echo!empty($data->config->otherConfig->strageties[$i]) && $data->config->otherConfig->strageties[$i]=='B'?' selected':''?>>B</option>
+                                            <option value="2"  <?php echo!empty($data->config->otherConfig->strageties[$i]) && $data->config->otherConfig->strageties[$i]=='C'?' selected':''?>>C</option>
+                                            <option value="3"  <?php echo!empty($data->config->otherConfig->strageties[$i]) && $data->config->otherConfig->strageties[$i]=='D'?' selected':''?>>D</option>
                                         </select>
                                     </div>
                                 <?php endfor;?>
@@ -172,7 +178,7 @@
                                     <?php for($i=0;$i<8;$i++):?>
                                         <div class="col-sm-1" style="padding: 1px 1px 1px 10px">
                                             <select id="<?php echo 'option1_'.$i?>" class="form-control pointer input-sm vms-input vms-input-option1" name="option1_[<?php echo $i?>]">
-                                                <option name="item" value="-1">--Loại OPT--</option>
+                                                <!--<option name="item" value="-1">--Loại OPT--</option>-->
                                                 <option value="0" <?php echo !is_null($data->config->otherConfig->option1[$i])&&$data->config->otherConfig->option1[$i]==0?' selected':''?>>Xanh</option>
                                                 <option value="1" <?php echo !is_null($data->config->otherConfig->option1[$i])&&$data->config->otherConfig->option1[$i]==1?' selected':''?>>Vàng</option>
                                                 <option value="2" <?php echo !is_null($data->config->otherConfig->option1[$i])&&$data->config->otherConfig->option1[$i]==2?' selected':''?>>Đỏ</option>
@@ -191,7 +197,7 @@
                                     <?php for($i=0;$i<8;$i++):?>
                                         <div class="col-sm-1" style="padding: 1px 1px 1px 10px">
                                             <select id="<?php echo 'option2_'.$i;?>" class="form-control pointer input-sm vms-input vms-input-option2" name="option2_[<?php echo $i?>]">
-                                                <option value="-1">--Loại OPT--</option>
+                                                <!--<option value="-1">--Loại OPT--</option>-->
                                                 <option value="0" <?php echo !is_null($data->config->otherConfig->option2[$i])&&$data->config->otherConfig->option2[$i]==0?' selected':''?>>Xanh</option>
                                                 <option value="1" <?php echo !is_null($data->config->otherConfig->option2[$i])&&$data->config->otherConfig->option2[$i]==1?' selected':''?>>Vàng</option>
                                                 <option value="2" <?php echo !is_null($data->config->otherConfig->option2[$i])&&$data->config->otherConfig->option2[$i]==2?' selected':''?>>Đỏ</option>
@@ -209,7 +215,7 @@
 <!--                                    <input type="text" placeholder="Thời điểm" id="vmsIp" name="otherStartTime" value="--><?php //echo @!is_null($data->config->otherConfig->hour_on)&&@!is_null($data->config->otherConfig->minute_on)?$data->config->otherConfig->hour_on.':'.$data->config->otherConfig->minute_on:''?><!--"  maxlength="20" class="form-control input-sm vms-input" placeholder="">-->
                                     <div class="ibox-content">
                                         <div class="input-group clockpicker clockpickerOtherStartTime" data-autoclose="true">
-                                            <input type="text" class="form-control" id="otherStartTime" name="otherStartTime" value="<?php echo @!is_null($data->config->otherConfig->hour_on)&&@!is_null($data->config->otherConfig->minute_on)?$data->config->otherConfig->hour_on.':'.$data->config->otherConfig->minute_on:''?>" >
+                                            <input type="text" class="form-control" id="otherStartTime" name="otherStartTime" value="<?php echo!is_null($data->config->otherConfig->hour_on)&&  !is_null($data->config->otherConfig->minute_on)?$data->config->otherConfig->hour_on.':'.$data->config->otherConfig->minute_on:''?>" >
                                             <span class="input-group-addon"><span class="fa fa-clock-o"></span></span>
                                         </div>
                                     </div>
