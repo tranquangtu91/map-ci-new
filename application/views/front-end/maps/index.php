@@ -135,15 +135,13 @@
                     event.preventDefault();
                     var itemc = ui.item;
                     $('#pac-input').val(itemc.label);
-                    if(typeof markers !=undefined && markers.length>=0){
+                    if(typeof markers !== undefined && markers.length >= 0){
                         for(i=0;i<markers.length;i++){
-//                            console.log(markers[i]['position'].lat().toFixed(3)+', '+markers[i]['position'].lng().toFixed(3));
-//                            console.log(itemc['lat']+', '+itemc['long']);
                             if(markers[i]['position'].lat().toFixed(5) === itemc['lat'].toFixed(5) && markers[i]['position'].lng().toFixed(5) === itemc['long'].toFixed(5)) {
-                                map.setCenter({lat:itemc['lat'], lng:itemc['long']})
+                                map.setCenter({lat:itemc['lat'], lng:itemc['long']});
                                 markers[i].setAnimation(google.maps.Animation.BOUNCE);
                                 setTimeout(function() {
-                                    markers[i].setAnimation(null)
+                                    markers[i].setAnimation(null);
                                 }, 5000);
                                 break;
                             }
@@ -151,8 +149,8 @@
                     }
                     return;
                 }
-            })
-        })
+            });
+        });
     </script>
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJj4O6Bf0zPYK4JsaAFHCMTNXg7GYXmd0&callback=initMap">
