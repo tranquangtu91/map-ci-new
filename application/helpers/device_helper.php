@@ -144,7 +144,7 @@ if (!function_exists('writeLog')) {
         $file = APPPATH . '..'.DIRECTORY_SEPARATOR.'log'.DIRECTORY_SEPARATOR.'debug.txt';
         $_message = date('Y:m:d H:i:s');
         $_message.=' ' . print_r($msg, true) . "\r\n";
-        file_put_contents($file, $_message, FILE_APPEND | LOCK_EX);
+//        file_put_contents($file, $_message, FILE_APPEND | LOCK_EX);
     }
 
 }
@@ -209,8 +209,8 @@ if (!function_exists('getListDevice')) {
             if (!empty($result) && $typeResponse == RESPON_JSON) {
                 foreach ($result as $i => $value) {
                     $result[$i] = array(
-                        'long'              => round( $value->longitude,3),
-                        'lat'               => round( $value->latitude, 3),
+                        'long'              => round( $value->longitude,6),
+                        'lat'               => round( $value->latitude, 6),
                         'name'              => strlen($value->device_name)>20? substr($value->device_name,0,20):$value->device_name,
                     );
                     if($type==1){

@@ -3,7 +3,7 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 //adding config items.
-$config['host_server'] = 'https://128.199.193.255';
+$config['host_server'] = 'https://demomap.ddns.net';
 $config['port_server'] = 8000;
 $config['addr_authenticate'] = '/api/authenticate';
 $config['addr_device_list'] = '/api/device-list';
