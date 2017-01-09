@@ -79,7 +79,7 @@
                                             <div class="form-group">
                                                 <div class="col-md-6">
                                                     <label>Tên thiết bị *</label>
-                                                    <input id="nameDev" name="nameDev" type="text" class="form-control required">
+                                                    <input id="nameDev" name="nameDev" disabled="true" type="text" class="form-control required">
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label>Register String *</label>
@@ -210,27 +210,26 @@
             dataType: "Json",
             data: {deviceName:trData.find('.NameDev').html()},
             success: function (data) {
-                console.log(data);
                 if(data.success){
-                   for(var k in fillData){
-                       if(fillData.hasOwnProperty(k)) {
-                            $('#'+fillData[k]).val(data[k]);
-                       }
+                    for(var k in fillData){
+                        if(fillData.hasOwnProperty(k)) {
+                            console.log(k);
+                            if (k === "longitude" || k === "latitude") {
+                                $('#'+fillData[k]).val(data[k].toFixed(6));
+                            } else {
+                                $('#'+fillData[k]).val(data[k]);
+                            }
+                        }
                     }
                     $('#myModal').modal('show');
                 } else {
-                    toast('Thông tin thiết bị','Không lấy được thông tin thiết bị','error')
+                    toast('Thông tin thiết bị','Không lấy được thông tin thiết bị','error');
                 }
             },
             error: function (jqXHR, textStatus, errorThrown) {
             }
-        })
-//        for(i=0;i<fillData.length;i++){
-//            $('input#'+fillData[i]).val(trData.find('.'+fillData[i]).html());
-//            console.log(trData.find());
-//            console.log(trData.find('.'+fillData[i]).html());
-//        }
-    })
+        });
+    });
 
     $('#frmUpdate').on('click',function(){
 
