@@ -137,7 +137,9 @@
                     $('#pac-input').val(itemc.label);
                     if(typeof markers !=undefined && markers.length>=0){
                         for(i=0;i<markers.length;i++){
-                            if(markers[i]['position'].lat().toFixed(3) == itemc['lat'] && markers[i]['position'].lng().toFixed(3)==itemc['long']) {
+//                            console.log(markers[i]['position'].lat().toFixed(3)+', '+markers[i]['position'].lng().toFixed(3));
+//                            console.log(itemc['lat']+', '+itemc['long']);
+                            if(markers[i]['position'].lat().toFixed(5) == itemc['lat'].toFixed(5) && markers[i]['position'].lng().toFixed(5)==itemc['long'].toFixed(5)) {
                                 map.setCenter({lat:itemc['lat'], lng:itemc['long']})
                                 markers[i].setAnimation(google.maps.Animation.BOUNCE);
                                 setTimeout(function() {
