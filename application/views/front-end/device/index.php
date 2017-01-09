@@ -33,12 +33,12 @@
                         <thead>
                             <tr>
                                 <th>Tên</th>
-                                <th>sim_number</th>
-                                <th>mode</th>
-                                <th>state</th>
-                                <th>register_string</th>
-                                <th>device_serial</th>
-                                <th>device_mainboard</th>
+                                <th>Số điện thoại</th>
+                                <th>Mode</th>
+                                <th>State</th>
+                                <th>Register String</th>
+                                <th>Serial</th>
+                                <th>Mainboard</th>
                                 <th>Mô tả</th>
                                 <th>Hành-động</th>
                             </tr>
@@ -70,62 +70,65 @@
                             <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
                                     <form action="<?php echo base_url().'Device/updateInfo'?>" method="post" id="updateDev">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title">Thông tin thiết bị</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="form-group">
-                                            <div class="col-md-6">
-                                                <label>Name *</label>
-                                                <input id="nameDev" name="nameDev" type="text" class="form-control required">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label>register-string *</label>
-                                                <input id="registerStringDev" name="registerStringDev" type="text" class="form-control required">
-                                            </div>
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Thông tin thiết bị</h4>
                                         </div>
-                                        <div class="form-group">
-                                            <div class="col-md-6">
-                                                <label>sim-number *</label>
-                                                <input id="simNumberDev" name="simNumberDev" type="text" class="form-control required">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label>state *</label>
-                                                <select name="stateDev" class="form-control required">
-                                                    <option value="1">Hiện</option>
-                                                    <option value="-1">Ẩn</option>
-                                                </select>
+
+                                        <div class="modal-body" style="height: 290px">
+                                            <div class="form-group">
+                                                <div class="col-md-6">
+                                                    <label>Tên thiết bị *</label>
+                                                    <input id="nameDev" name="nameDev" type="text" class="form-control required">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label>Register String *</label>
+                                                    <input id="registerStringDev" name="registerStringDev" type="text" class="form-control required">
+                                                </div>
                                             </div>
 
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-md-6">
-                                                <label>Long *</label>
-                                                <input id="longDev" name="longDev" type="text" class="form-control required">
+                                            <div class="form-group">
+                                                <div class="col-md-6">
+                                                    <label>Số điện thoại *</label>
+                                                    <input id="simNumberDev" name="simNumberDev" type="text" class="form-control required">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label>Trạng thái *</label>
+                                                    <select name="stateDev" class="form-control required">
+                                                        <option value="1">Hiện</option>
+                                                        <option value="-1">Ẩn</option>
+                                                    </select>
+                                                </div>
                                             </div>
-                                            <div class="col-md-6">
-                                                <label>Lat *</label>
-                                                <input id="latDev" name="latDev" type="text" class="form-control required">
-                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <div class="col-md-6">
+                                                    <label>Kinh độ *</label>
+                                                    <input id="longDev" name="longDev" type="text" class="form-control required">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label>Vĩ độ *</label>
+                                                    <input id="latDev" name="latDev" type="text" class="form-control required">
+                                                </div>
+                                            </div>                                            
 
+                                            <div class="form-group">
+                                                <div class ="col-lg-12">
+                                                    <label>Mô tả *</label>
+                                                    <textarea id="descriptionDev" name="descriptionDev" type="text" class="form-control required"></textarea>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label>Mô tả *</label>
-                                            <textarea id="descriptionDev" name="descriptionDev" type="text" class="form-control required"></textarea>
+
+                                        <div class="modal-footer">
+                                            <button type="submit" class="btn btn-primary" id="frmUpdate">Update</button>
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                                         </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="submit" class="btn btn-primary" id="frmUpdate">Update</button>
-                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                                    </div>
                                     </form>
                                 </div>
-
                             </div>
-                        </div>
-                </div>
-                        <tfoot>
+                        </div>                        
+<!--                        <tfoot>
                             <tr>
                                 <th>Tên</th>
                                 <th>sim_number</th>
@@ -137,10 +140,9 @@
                                 <th>Mô tả</th>
                                 <th>Hành động</th>
                             </tr>
-                        </tfoot>
+                        </tfoot>-->
                     </table>
                 </div>
-
             </div>
         </div>
     </div>
@@ -179,7 +181,7 @@
         var c = $(this);
         var name = c.data('name').substring(4);
         r = confirm('Bạn có chắc muốn thực hiện');
-            if(r==true){
+            if(r == true){
                 $.ajax({
                     url: '<?php echo base_url().'Device/delete'?>',
                     type: "POST",
@@ -214,9 +216,9 @@
                        if(fillData.hasOwnProperty(k)) {
                             $('#'+fillData[k]).val(data[k]);
                        }
-                   }
+                    }
                     $('#myModal').modal('show');
-                }else{
+                } else {
                     toast('Thông tin thiết bị','Không lấy được thông tin thiết bị','error')
                 }
             },

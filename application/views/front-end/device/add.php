@@ -33,46 +33,45 @@
                     <fieldset>
                         <h2>Thông số cơ bản</h2>
                         <div class="row">
-                                <div class="form-group">
-                                    <div class="col-md-6">
-                                        <label>Name *</label>
-                                    <input id="nameDev" name="nameDev" type="text" class="form-control required">
-                                    </div>
+                            <div class="form-group">
                                 <div class="col-md-6">
-                                    <label>register-string *</label>
-                                    <input id="registerStringDev" name="registerStringDev" type="text" class="form-control required">
+                                    <label>Name *</label>
+                                <input id="nameDev" name="nameDev" type="text" class="form-control required">
                                 </div>
+                            <div class="col-md-6">
+                                <label>register-string *</label>
+                                <input id="registerStringDev" name="registerStringDev" type="text" class="form-control required">
+                            </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-6">
+                                    <label>sim-number *</label>
+                                <input id="simNumberDev" name="simNumberDev" type="text" class="form-control required">
                                 </div>
-                                <div class="form-group">
-                                    <div class="col-md-6">
-                                        <label>sim-number *</label>
-                                    <input id="simNumberDev" name="simNumberDev" type="text" class="form-control required">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label>state *</label>
-                                        <select name="stateDev" class="form-control required">
-                                            <option value="1">Hiện</option>
-                                            <option value="0">Ẩn</option>
-                                        </select>
-                                    </div>
-                                    
+                                <div class="col-md-6">
+                                    <label>state *</label>
+                                    <select name="stateDev" class="form-control required">
+                                        <option value="1">Hiện</option>
+                                        <option value="0">Ẩn</option>
+                                    </select>
                                 </div>
-                                <div class="form-group">
-                                    <div class="col-md-6">
-                                        <label>Long *</label>
-                                    <input id="longDev" name="longDev" type="text" class="form-control required">
-                                    </div>
-                                    <div class="col-md-6">
-                                       <label>Lat *</label>
-                                    <input id="latDev" name="latDev" type="text" class="form-control required"> 
-                                    </div>
-                                    
+
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-6">
+                                    <label>Long *</label>
+                                <input id="longDev" name="longDev" type="text" class="form-control required">
                                 </div>
-                                <div class="form-group">
-                                    <div class="col-md-12">
-                                        <label>Mô tả *</label>
-                                        <textarea id="descriptionDev" name="descriptionDev" type="text" class="form-control required"></textarea>
-                                    </div>
+                                <div class="col-md-6">
+                                   <label>Lat *</label>
+                                <input id="latDev" name="latDev" type="text" class="form-control required"> 
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <label>Mô tả *</label>
+                                    <textarea id="descriptionDev" name="descriptionDev" type="text" class="form-control required"></textarea>
+                                </div>
                             </div>
                         </div>
                     </fieldset>
