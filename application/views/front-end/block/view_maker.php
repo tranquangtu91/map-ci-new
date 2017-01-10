@@ -212,17 +212,15 @@
                             <div class="form-group">
                                 <label class="col-sm-1 control-label label-vms">Giờ mở<font color="red"><b>*</b></font></label>
                                 <div class="col-sm-2">
-<!--                                    <input type="text" placeholder="Thời điểm" id="vmsIp" name="otherStartTime" value="--><?php //echo @!is_null($data->config->otherConfig->hour_on)&&@!is_null($data->config->otherConfig->minute_on)?$data->config->otherConfig->hour_on.':'.$data->config->otherConfig->minute_on:''?><!--"  maxlength="20" class="form-control input-sm vms-input" placeholder="">-->
                                     <div class="ibox-content">
                                         <div class="input-group clockpicker clockpickerOtherStartTime" data-autoclose="true">
-                                            <input type="text" class="form-control" id="otherStartTime" name="otherStartTime" value="<?php echo!is_null($data->config->otherConfig->hour_on)&&  !is_null($data->config->otherConfig->minute_on)?$data->config->otherConfig->hour_on.':'.$data->config->otherConfig->minute_on:''?>" >
+                                            <input type="text" class="form-control" id="otherStartTime" name="otherStartTime" value="<?php echo !is_null($data->config->otherConfig->hour_on)&&  !is_null($data->config->otherConfig->minute_on)?$data->config->otherConfig->hour_on.':'.$data->config->otherConfig->minute_on:''?>" >
                                             <span class="input-group-addon"><span class="fa fa-clock-o"></span></span>
                                         </div>
                                     </div>
                                 </div>
                                 <label class="col-sm-1 control-label label-vms">Giờ tắt<font color="red"><b>*</b></font></label>
                                 <div class="col-sm-2">
-<!--                                    <input type="text" placeholder="Chiến lược" id="vmsPort" name="otherEndTime" value="--><?php //echo @!is_null($data->config->otherConfig->hour_off)&&@!is_null($data->config->otherConfig->minute_off)?$data->config->otherConfig->hour_off.':'.$data->config->otherConfig->minute_off:''?><!--"  maxlength="6" class="form-control input-sm vms-input" placeholder="">-->
                                     <div class="ibox-content">
                                         <div class="input-group clockpicker clockpickerOtherEndTime" data-autoclose="true">
                                             <input type="text" class="form-control" id="otherEndTime" name="otherEndTime" value="<?php echo @!is_null($data->config->otherConfig->hour_off)&&@!is_null($data->config->otherConfig->minute_off)?$data->config->otherConfig->hour_off.':'.$data->config->otherConfig->minute_off:''?>" >
@@ -241,7 +239,7 @@
                                     </div>
                                 </div>
                                 <label class="col-sm-1 control-label label-vms" style="margin: 7px 0px 0px -25px;padding: 0px 0px 0px 0px;">Số pha<font color="red"><b>*</b></font></label>
-                                <div class="col-sm-2" style="padding: 0px 79px 0px 10px;">
+                                <div class="col-sm-2" style="padding: 0px 79px 0px 10px;width: 152px;">
                                     <input type="text" placeholder="Chiến lược" id="otherAlpha"  name="otherAlpha" value="<?php echo @!is_null($data->config->otherConfig->so_pha)?$data->config->otherConfig->so_pha:''?>" maxlength="6" class="form-control input-sm vms-input" placeholder="" style="padding:0px !important;">
                                 </div>
                             </div>

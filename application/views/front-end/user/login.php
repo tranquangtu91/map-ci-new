@@ -1,7 +1,7 @@
 <div class="loginColumns animated fadeInDown">
     <div class="row">
         <div class="col-md-6">
-            <h2 class="font-bold">Welcome to DHT Group</h2>
+            <h2 class="font-bold">Welcome to DHT GROUP</h2>
             <p>
                 <small>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</small>
             </p>

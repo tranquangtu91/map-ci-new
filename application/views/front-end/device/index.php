@@ -79,7 +79,7 @@
                                             <div class="form-group">
                                                 <div class="col-md-6">
                                                     <label>Tên thiết bị *</label>
-                                                    <input id="nameDev" name="nameDev" disabled="true" type="text" class="form-control required">
+                                                    <input id="nameDev" name="nameDev" readonly="readonly" type="text" class="form-control required">
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label>Register String *</label>
@@ -213,7 +213,6 @@
                 if(data.success){
                     for(var k in fillData){
                         if(fillData.hasOwnProperty(k)) {
-                            console.log(k);
                             if (k === "longitude" || k === "latitude") {
                                 $('#'+fillData[k]).val(data[k].toFixed(6));
                             } else {

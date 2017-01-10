@@ -142,7 +142,7 @@
                                 markers[i].setAnimation(google.maps.Animation.BOUNCE);
                                 setTimeout(function() {
                                     markers[i].setAnimation(null);
-                                }, 5000);
+                                }, 2000);
                                 break;
                             }
                         }
