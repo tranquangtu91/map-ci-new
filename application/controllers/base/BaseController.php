@@ -20,11 +20,10 @@ class BaseController extends CI_Controller {
     }
 
     public function checkLogin(){
-        if(empty($this->session->userdata('username'))||empty($this->session->userdata('password'))||
-                empty($this->session->userdata('role'))||empty($this->session->userdata('token'))){
+        if(!($this->session->userdata('username'))||!($this->session->userdata('password'))||!($this->session->userdata('role'))||!($this->session->userdata('token'))){
             return false;
         }
-        return true;;
+        return true;
     }
     
     public function checkPermisson(){
