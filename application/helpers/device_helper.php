@@ -219,12 +219,12 @@ if (!function_exists('getListDevice')) {
                         $result[$i]['device_mainboard'] = isset($value->device_mainboard)?$value->device_mainboard:'';
                         $result[$i]['mode'] = $value->mode;
                         $result[$i]['state'] = $value->state;
-                        $result[$i]['created_time'] = $value->created_time;
+                        $result[$i]['created_time'] = isset($value->created_time)?$value->created_time:'';
                         $result[$i]['register_string'] = $value->register_string;
                         $result[$i]['description'] = @$value->description;
                     }else{
                         $result[$i]['state'] = @$value->state;
-                        $result[$i]['created_time'] = $value->created_time;
+                        $result[$i]['created_time'] = isset($value->created_time)?$value->created_time:'';
                         $result[$i]['label'] = $value->device_name.'-'.@$value->device_serial.'-'.@$value->device_mainboard;
                         $result[$i]['value'] = $value->device_name;
                     }
