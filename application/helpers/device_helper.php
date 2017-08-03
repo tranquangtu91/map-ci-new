@@ -211,7 +211,7 @@ if (!function_exists('getListDevice')) {
                     $result[$i] = array(
                         'long'              => round( $value->longitude,6),
                         'lat'               => round( $value->latitude, 6),
-                        'name'              => strlen($value->device_name)>20? substr($value->device_name,0,20):$value->device_name,
+                        'name'              => strlen($value->device_name)>40? substr($value->device_name,0,40):$value->device_name,
                     );
                     if($type==1){
                         $result[$i]['sim_number'] = isset($value->sim_number)?$value->sim_number:'';

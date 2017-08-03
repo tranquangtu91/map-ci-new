@@ -35,7 +35,7 @@
     <hr/>
     <div class="row">
         <div class="col-md-6">
-            Copyright Example Company
+            Copyright DHT Company
         </div>
         <div class="col-md-6 text-right">
             <small>© 2016-2026</small>

@@ -40,12 +40,13 @@
                                 <th>Serial</th>
                                 <th>Mainboard</th>
                                 <th>Mô tả</th>
-                                <th>Hành-động</th>
+                                <th>Hành động</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php if(!empty($listDevice)):?>
                             <?php foreach ($listDevice as $i =>$row):?>
+							<?php if (isset($row['name'])):?>
                             <tr class="gradeX">
                                 <td class="nameDev"><?php echo isset($row['name'])?$row['name']:'';?></td>
                                 <td class="simNumberDev"><?php echo isset($row['sim_number'])?$row['sim_number']:'';?></td>
@@ -63,6 +64,7 @@
                             </button></div>
                                     </td>
                             </tr>
+                            <?php endif;?>
                             <?php endforeach;?>
                             <?php endif;?>
                         </tbody>
@@ -128,19 +130,19 @@
                                 </div>
                             </div>
                         </div>                        
-<!--                        <tfoot>
+                        <tfoot>
                             <tr>
                                 <th>Tên</th>
-                                <th>sim_number</th>
-                                <th>mode</th>
-                                <th>state</th>
-                                <th>register_string</th>
-                                <th>device_serial</th>
-                                <th>device_mainboard</th>
+                                <th>Số điện thoại</th>
+                                <th>Mode</th>
+                                <th>State</th>
+                                <th>Register String</th>
+                                <th>Serial</th>
+                                <th>Mainboard</th>
                                 <th>Mô tả</th>
                                 <th>Hành động</th>
                             </tr>
-                        </tfoot>-->
+                        </tfoot>
                     </table>
                 </div>
             </div>

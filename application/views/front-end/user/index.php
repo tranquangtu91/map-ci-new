@@ -181,7 +181,7 @@
         r = confirm('Bạn có chắc muốn thực hiện');
         if(r==true){
             $.ajax({
-                url: '<?php echo base_url().'Device/delete'?>',
+                url: '<?php echo base_url().'User/delete'?>',
                 type: "POST",
                 dataType: "Json",
                 data: {deviceName:name},
